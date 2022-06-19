@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+ <AddIn Type="Application">
+    <Name>Create sketches for drawings and scheduler</Name>
+    <Assembly>ShellAllSketch_2023.dll</Assembly>
+    <ClientId>40F44A5E-90DC-4E64-89DC-0B6BE0EA05ED</ClientId>
+    <FullClassName>ShellAllSketch.ShellAllSketch</FullClassName>
+    <VendorId>Ar-Cadia</VendorId>
+    <VendorDescription>Ar-Cadia, www.ar-cadia.com.ua</VendorDescription>
+  </AddIn>  
+</RevitAddIns>

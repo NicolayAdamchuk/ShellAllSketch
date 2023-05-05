@@ -18,7 +18,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;Full</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;Full;Tag</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
@@ -89,8 +89,11 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "e:\OneDrive\Project 2023\ShellAllSketch\ShellAllSketch\bin\Debug\ShellAllSketch_2023.dll" "c:\ProgramData\Autodesk\ApplicationPlugins\ADNPlugin-SketchReinforcement_2023.bundle\Contents\ShellAllSketch_2023.dll"
-copy "e:\OneDrive\Project 2023\ShellAllSketch\ShellAllSketch\bin\Debug\ru\ShellAllSketch_2023.resources.dll"  "c:\ProgramData\Autodesk\ApplicationPlugins\ADNPlugin-SketchReinforcement_2023.bundle\Contents\ru\ShellAllSketch_2023.resources.dll"</PostBuildEvent>
+    <PostBuildEvent>copy "c:\MyProject\ShellAllSketch\ShellAllSketch\bin\Debug\ShellAllSketch_2023.dll" "c:\ProgramData\Autodesk\ApplicationPlugins\ADNPlugin-SketchReinforcement_2023.bundle\Contents\ShellAllSketch_2023.dll"
+copy "c:\MyProject\ShellAllSketch\ShellAllSketch\bin\Debug\ru\ShellAllSketch_2023.resources.dll"  "c:\ProgramData\Autodesk\ApplicationPlugins\ADNPlugin-SketchReinforcement_2023.bundle\Contents\ru\ShellAllSketch_2023.resources.dll"
+
+copy "c:\MyProject\ShellAllSketch\ShellAllSketch\bin\Debug\ShellAllSketch_2023.dll" c:\MyProject\ShellAllSketch\Content\Contents\ShellAllSketch_2023.dll"
+copy "c:\MyProject\ShellAllSketch\ShellAllSketch\bin\Debug\ru\ShellAllSketch_2023.resources.dll" "c:\MyProject\ShellAllSketch\Content\Contents\ru\ShellAllSketch_2023.resources.dll"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

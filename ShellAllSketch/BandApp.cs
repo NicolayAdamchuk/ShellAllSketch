@@ -28,10 +28,17 @@ namespace ShellAllSketch
         static string AddInPath = typeof(ShellAllSketch).Assembly.Location;
         // Button icons directory
         static string ButtonIconsFolder = Path.GetDirectoryName(AddInPath);
+#if RVT2024
+        static string AddInPathSketchFull = ButtonIconsFolder + "\\SketchFull_2024.dll";
+        static string AddInPathSketchScheduler = ButtonIconsFolder + "\\SketchReinforcement_2024.dll";
+        #if Tag
+        static string AddInPathSketchTag = ButtonIconsFolder + "\\SketchTag_2024.dll";
+        #endif
+#else
         static string AddInPathSketchFull = ButtonIconsFolder + "\\SketchFull_2023.dll";
         static string AddInPathSketchScheduler = ButtonIconsFolder + "\\SketchReinforcement_2023.dll";
-        static string AddInPathSketchTag = ButtonIconsFolder + "\\SketchTag_2023.dll";
-
+        static string AddInPathSketchTag = ButtonIconsFolder + "\\SketchTag_2024.dll";
+#endif
         #region IExternalApplication Members
         /// <summary>
         /// Implements the OnShutdown event
@@ -82,11 +89,11 @@ namespace ShellAllSketch
             styleSettingButton3.SetContextualHelp(ch3);
             ribbonPanel.AddItem(styleSettingButton3);
 
-#endif 
+#endif
 
             return Result.Succeeded;
         }
 
-        #endregion
+#endregion
     }
 }
